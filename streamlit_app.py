@@ -12,15 +12,16 @@ mouse_x, mouse_y = -1, -1
 
 # マウスのコールバック関数
 def mouse_callback(event, x, y, flags, param):
-    global mouse_x, mouse_y
     if event == cv2.EVENT_MOUSEMOVE:
         cv2.circle(img, (x, y), 10, (255, 255, 255), -1)
 
 window = st.empty()
 
+cv2.setMouseCallback("FaceMesh", mouse_callback)
+
+
 while True:
     img = np.full((800,800,3), 0)
-    cv2.setMouseCallback("FaceMesh", mouse_callback)
-    st.write(mouse_x)
+    st.write(x)
     window.image(img)
 
