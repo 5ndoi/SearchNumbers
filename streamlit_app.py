@@ -17,11 +17,9 @@ def mouse_callback(event, x, y, flags, param):
 
 window = st.empty()
 
-cv2.setMouseCallback("FaceMesh", mouse_callback)
-
 
 while True:
     img = np.full((800,800,3), 0)
-    st.write(x)
+    cv2.setMouseCallback("FaceMesh", mouse_callback)
     window.image(img)
 
