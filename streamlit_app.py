@@ -7,6 +7,6 @@ st.write(
     "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
 )
 
-img = np.full((800,800,3), 255)
+img = np.full((800,800,3), 0)
 
 st.image(img)
