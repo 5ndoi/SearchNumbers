@@ -21,5 +21,6 @@ window = st.empty()
 while True:
     img = np.full((800,800,3), 0)
     cv2.setMouseCallback("FaceMesh", mouse_callback)
+    st.write(mouse_x)
     window.image(img)
 
