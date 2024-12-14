@@ -17,8 +17,9 @@ def mouse_callback(event, x, y, flags, param):
         cv2.circle(img, (x, y), 1, (0, 255, 255), -1)
 
 img = np.full((800,800,3), 0)
+window = st.empty()
 
 while True:
     cv2.setMouseCallback("FaceMesh", mouse_callback)
-    st.image(img)
+    window.image(img)
 
